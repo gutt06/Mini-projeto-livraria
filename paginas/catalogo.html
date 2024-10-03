@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="/css/catalago.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"><a href="#"><button>Voltar</button></a></div>
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/duna.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo"></h1>
+                <h2 id="autor"></h2>
+                <h2 id="preco"></h2>
+                <h2 id="genero"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/orgulho.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo2"></h1>
+                <h2 id="autor2"></h2>
+                <h2 id="preco2"></h2>
+                <h2 id="genero2"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/senhordosaneis.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo3"></h1>
+                <h2 id="autor3"></h2>
+                <h2 id="preco3"></h2>
+                <h2 id="genero3"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/iluminado.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo4"></h1>
+                <h2 id="autor4"></h2>
+                <h2 id="preco4"></h2>
+                <h2 id="genero4"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/garota.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo5"></h1>
+                <h2 id="autor5"></h2>
+                <h2 id="preco5"></h2>
+                <h2 id="genero5"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/passaro.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo6"></h1>
+                <h2 id="autor6"></h2>
+                <h2 id="preco6"></h2>
+                <h2 id="genero6"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/sapiens.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo7"></h1>
+                <h2 id="autor7"></h2>
+                <h2 id="preco7"></h2>
+                <h2 id="genero7"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/expresso.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo8"></h1>
+                <h2 id="autor8"></h2>
+                <h2 id="preco8"></h2>
+                <h2 id="genero8"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/1984.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo9"></h1>
+                <h2 id="autor9"></h2>
+                <h2 id="preco9"></h2>
+                <h2 id="genero9"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/habito.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo10"></h1>
+                <h2 id="autor10"></h2>
+                <h2 id="preco10"></h2>
+                <h2 id="genero10"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/sofia.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo11"></h1>
+                <h2 id="autor11"></h2>
+                <h2 id="preco11"></h2>
+                <h2 id="genero11"></h2>
+            </div>
+        </div>
+
+        <div class="livro">
+            <div class="imagem"><img src="/imagens/domcasmurro.jpg" alt=""></div>
+            <div class="desc">
+                <h1 id="titulo12"></h1>
+                <h2 id="autor12"></h2>
+                <h2 id="preco12"></h2>
+                <h2 id="genero12"></h2>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        livro={
+            livro1:{titulo:"Duna",autor:"Frank Herbert",preco:"R$"+65+"."+0+0,genero:"Gênero: Ficção Científica"},
+            livro2:{titulo:"Orgulho e Preconceito",autor:"Jane Austen",preco:"R$"+30+"."+0+0,genero:"Gênero: Romance"},
+            livro3:{titulo:"O Senhor das Anéis: A Sociedade do Anel",autor:"J.R.R. Tolkien",preco:"R$"+50+"."+0+0,genero:"Gênero: Fantasia"},
+            livro4:{titulo:"O Iluminado",autor:"Stephen King",preco:"R$"+45+"."+0+0,genero:"Gênero: Terror"},
+            livro5:{titulo:"Garota Exemplar",autor:"Gillian  Flynn",preco:"R$"+35+"."+0+0,genero:"Gênero: Mistério"},
+            livro6:{titulo:"Eu Sei Por Que o Pássaro Canta na Gaiola",autor:"Maya Angelou",preco:"R$"+46+"."+0+0,genero:"Gênero: Autobiografia"},
+            livro7:{titulo:"Sapiens: Uma Breve História da Humanidade",autor:"Yuval Noah Harari",preco:"R$"+50+"."+0+0,genero:"Gênero: História"},
+            livro8:{titulo:"Assassinato no Expresso do Oriente",autor:"Agatha Christie",preco:"R$"+30+"."+0+0,genero:"Gênero: Ficção Policial"},
+            livro9:{titulo:"1984",autor:"George Orwell",preco:"R$"+35+"."+0+0,genero:"Gênero: Ficção Distópica"},
+            livro10:{titulo:"O Poder do Hábito",autor:"Charles Duhigg",preco:"R$"+40+"."+0+0,genero:"Gênero: Autoajuda"},
+            livro11:{titulo:"O Mundo de Sofia",autor:"Jostein Gaarder",preco:"R$"+50+"."+0+0,genero:"Gênero: Filosofia"},
+            livro12:{titulo:"Dom Casmurro",autor:"Machado de Assis",preco:"R$"+20+"."+0+0,genero:"Gênero: Literatura Brasileira"},
+        }
+        
+        document.getElementById("titulo").textContent=livro.livro1.titulo
+        document.getElementById("autor").textContent=livro.livro1.autor
+        document.getElementById("preco").textContent=livro.livro1.preco
+        document.getElementById("genero").textContent=livro.livro1.genero
+
+        document.getElementById("titulo2").textContent=livro.livro2.titulo
+        document.getElementById("autor2").textContent=livro.livro2.autor
+        document.getElementById("preco2").textContent=livro.livro2.preco
+        document.getElementById("genero2").textContent=livro.livro2.genero
+
+        document.getElementById("titulo3").textContent=livro.livro3.titulo
+        document.getElementById("autor3").textContent=livro.livro3.autor
+        document.getElementById("preco3").textContent=livro.livro3.preco
+        document.getElementById("genero3").textContent=livro.livro3.genero
+
+        document.getElementById("titulo4").textContent=livro.livro4.titulo
+        document.getElementById("autor4").textContent=livro.livro4.autor
+        document.getElementById("preco4").textContent=livro.livro4.preco
+        document.getElementById("genero4").textContent=livro.livro4.genero
+
+        document.getElementById("titulo5").textContent=livro.livro5.titulo
+        document.getElementById("autor5").textContent=livro.livro5.autor
+        document.getElementById("preco5").textContent=livro.livro5.preco
+        document.getElementById("genero5").textContent=livro.livro5.genero
+
+        document.getElementById("titulo6").textContent=livro.livro6.titulo
+        document.getElementById("autor6").textContent=livro.livro6.autor
+        document.getElementById("preco6").textContent=livro.livro6.preco
+        document.getElementById("genero6").textContent=livro.livro6.genero
+
+        document.getElementById("titulo7").textContent=livro.livro7.titulo
+        document.getElementById("autor7").textContent=livro.livro7.autor
+        document.getElementById("preco7").textContent=livro.livro7.preco
+        document.getElementById("genero7").textContent=livro.livro7.genero
+
+        document.getElementById("titulo8").textContent=livro.livro8.titulo
+        document.getElementById("autor8").textContent=livro.livro8.autor
+        document.getElementById("preco8").textContent=livro.livro8.preco
+        document.getElementById("genero8").textContent=livro.livro8.genero
+
+        document.getElementById("titulo9").textContent=livro.livro9.titulo
+        document.getElementById("autor9").textContent=livro.livro9.autor
+        document.getElementById("preco9").textContent=livro.livro9.preco
+        document.getElementById("genero9").textContent=livro.livro9.genero
+
+        document.getElementById("titulo10").textContent=livro.livro10.titulo
+        document.getElementById("autor10").textContent=livro.livro10.autor
+        document.getElementById("preco10").textContent=livro.livro10.preco
+        document.getElementById("genero10").textContent=livro.livro10.genero
+
+        document.getElementById("titulo11").textContent=livro.livro11.titulo
+        document.getElementById("autor11").textContent=livro.livro11.autor
+        document.getElementById("preco11").textContent=livro.livro11.preco
+        document.getElementById("genero11").textContent=livro.livro11.genero
+
+        document.getElementById("titulo12").textContent=livro.livro12.titulo
+        document.getElementById("autor12").textContent=livro.livro12.autor
+        document.getElementById("preco12").textContent=livro.livro12.preco
+        document.getElementById("genero12").textContent=livro.livro12.genero
+
+
+    </script>
+</body>
+</html>
