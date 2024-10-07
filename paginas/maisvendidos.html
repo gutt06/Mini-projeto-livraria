@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Vendidos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="navbar"><a href="#"><button>Voltar</button></a><h1>Livros Mais Vendidos</h1></div>
+    <div class="grafico_container">
+        <canvas id="grafico-barras"></canvas>
+    </div>
+    <div class="separador"><h1>Gêneros mais pedidos</h1></div>
+    <div class="grafico_container"></div>
+        <canvas id="grafico-pizza"></canvas>
+    </div>
+
+    <script>
+        var graficobarras=document.getElementById("grafico-barras").getContext("2d");
+
+        var grafico1=new Chart(graficobarras,{
+            type:'bar',
+            data:{
+                labels:['Duna','Orgulho e Preconceito','O senhor dos Anéis: A Sociedade do Anel','O Ilumiado','Garota exemplar','Eu Sei Por Que o Pássaro Canta na Gaiola','Sapiens: Uma Breve História da Humanidade','Assasinato no Expresso do Oriente','1984','O Poder do Hábito','O Mundo de Sofia','Dom Casmurro'],
+                datasets:[{
+                    label:'Vendas',
+                    data:[560000,317000,824000,632000,329000,235000,189000,751000,332000,114000,135000,370000],
+                    backgroundColor:[
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)',
+                        'rgba(75, 192, 192, 0.5)',
+                        'rgba(153, 102, 255, 0.5)',
+                        'rgba(255, 159, 64, 0.5)',
+                        'rgba(199, 199, 199, 0.5)',
+                        'rgba(255, 205, 210, 0.5)',
+                        'rgba(100, 181, 246, 0.5)',
+                        'rgba(174, 213, 129, 0.5)',
+                        'rgba(255, 238, 88, 0.5)',
+                        'rgba(244, 143, 177, 0.5)'
+                    ],
+                    borderColor:[
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(199, 199, 199, 1)',
+                        'rgba(255, 205, 210, 1)',
+                        'rgba(100, 181, 246, 1)',
+                        'rgba(174, 213, 129, 1)',
+                        'rgba(255, 238, 88, 1)',
+                        'rgba(244, 143, 177, 1)'
+                    ],
+                    borderWidth:1
+                }]
+            },
+            options:{
+                responsive:true,
+                maintainAspectRatio: false,
+                animation:{
+                    duration:1000,
+                },
+                scales:{
+                    y:{
+                        beginAtZero:true
+                    }
+                }
+            }
+        });
+
+        var graficopizza=document.getElementById("grafico-pizza").getContext("2d")
+        var grafico2=new Chart(graficopizza,{
+            type:'pie',
+            data:{
+                labels:['Ficção Científica','Romance','Fantasia','Terror','Mistério','Autobiografia','História','Ficção Policial','Ficção Distópica','Autoajuda','Filosofia','Literatura Brasileira'],
+                datasets:[{
+                    label:'Vendas',
+                    data:[560000,317000,824000,632000,329000,235000,189000,751000,332000,114000,135000,370000],
+                    backgroundColor:[
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(199, 199, 199, 1)',
+                        'rgba(255, 205, 210, 1)',
+                        'rgba(100, 181, 246, 1)',
+                        'rgba(174, 213, 129, 1)',
+                        'rgba(255, 238, 88, 1)',
+                        'rgba(244, 143, 177, 1)'
+                    ],
+                }]
+            },
+        });
+    </script>
+</body>
+</html>
