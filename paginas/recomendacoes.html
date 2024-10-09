@@ -52,32 +52,42 @@
         };
 
         // Função para exibir recomendações
-        document.getElementById('form_preferencias').addEventListener('submit', function (event) {
+        document.getElementById('form_preferencias').addEventListener('submit', function (event) { // A função addEventListener é usada para pegar o evento do submit do formulário (form_preferencias)
+
+            // Impede que o formulário recarregue a página
             event.preventDefault();
+
+            // O .map pega todos os checkboxes marcados (gêneros selecionados) e cria um array com os valores dos gêneros literários selecionados
             const genero_selecionado = Array.from(document.querySelectorAll('input[name="generos"]:checked')).map(checkbox => checkbox.value);
 
+            // Seleciona a div onde as recomendações serão exibidas
             const div_recomendacoes = document.getElementById('recomendacoes');
+
             div_recomendacoes.innerHTML = ''; // Limpa as recomendações anteriores
 
-            genero_selecionado.forEach(genero => {
-                for (const key in livros) {
-                    if (livros[key].genero === genero) {
-                        const elemento_livro = document.createElement('div');
+            genero_selecionado.forEach(genero => { // Pega os gêneros selecionados pelo usuário
+                for (const key in livros) { // Pega todos os livros do objeto literal (livros)
+                    if (livros[key].genero === genero) { // Verifica se o gênero do livro corresponde ao gênero selecionado
+                        const elemento_livro = document.createElement('div'); // Cria uma div e um css (livro_rec) para o livro
                         elemento_livro.className = 'livro_rec';
 
-                        const img_elemento = document.createElement('img');
-                        img_elemento.src = livros[key].imagem; // Adiciona a imagem
+                        const img_elemento = document.createElement('img'); // Cria uma tag img onde ficará a imagem
+                        img_elemento.src = livros[key].imagem; // Define o "src" da imagem no objeto literal
 
-                        const info_elemento = document.createElement('div');
-                        info_elemento.textContent = `${livros[key].titulo} - ${livros[key].autor} (${livros[key].preco})`;
+                        const info_elemento = document.createElement('div'); // Cria uma div para conter as informações do livro
+                        info_elemento.textContent = `${livros[key].titulo} - ${livros[key].autor} (${livros[key].preco})`; // Preenche a div com título, autor e preço que são pegos no objeto literal
 
+                        // Adiciona a imagem e as informações do livro à div do livro (elemento_livro)
                         elemento_livro.appendChild(img_elemento);
                         elemento_livro.appendChild(info_elemento);
+
+                        // Adiciona o livro completo à div de recomendações
                         div_recomendacoes.appendChild(elemento_livro);
                     }
                 }
             });
 
+            // Se ao menos um gênero foi selecionado, exibe as recomendações
             if (genero_selecionado.length > 0) {
                 document.getElementById('recomendacoes_livro').style.display = 'block';
             } else {
